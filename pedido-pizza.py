@@ -11,7 +11,9 @@ if toppings == []:
                 toppings.append(topping)
             elif answer_2 == 'N':
                 print('OK.')
-        print(f'Ingredientes: {toppings}')
+        print('\nIngredientes na pizza:')
+        for topping in toppings:
+            print(topping)
     elif answer == 'S':
         print('Ok.')
-print('Pizza finalizada.')
+print('\nPizza finalizada.')
