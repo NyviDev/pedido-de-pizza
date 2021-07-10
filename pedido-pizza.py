@@ -38,26 +38,7 @@ while True:
 
             else:
                 print('Erro. Tente novamente.')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                
         break
 
     elif resposta.upper() == 'N':
