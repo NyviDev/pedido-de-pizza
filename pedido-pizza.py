@@ -6,7 +6,9 @@ while True:
 
     if resposta.upper() == 'S':
         while True:
-            opcao = input('Você pode escolher entre "MONTE SUA PIZZA" ou "PIZZA SIMPLES" que vem molho de tomate e queijo. qual você escolhe? ')
+            mensagem = ('Você pode escolher entre "PIZZA SIMPLES", que vem molho de tomate e queijo ou "MONTE SUA PIZZA", que você pode adicionar qualquer ingrediente além do molho e queijo. qual você escolhe?')
+            mensagem += ('\n*Cada ingrediente adicionado será cobrado um adicional de R$0,50. ')
+            opcao = input(mensagem)
 
             if opcao.lower() == 'monte sua pizza':
                 ingredientes = [input('Qual ingrediente você gostaria de adicionar na sua pizza? ')]
@@ -35,10 +37,22 @@ while True:
             elif opcao.lower() == 'pizza simples':
                 print('Ok. Uma pizza simples.')
                 break
-
             else:
                 print('Erro. Tente novamente.')
-                
+
+        print("\n--- Escolha o tamanho ---")
+        print("PEQUENA ------------ R$20,00")
+        print("MÉDIA -------------- R$25,00")
+        print("GRANDE ------------- R$30,00")
+        tamanho = input('')
+        preco = valores[tamanho]
+        
+        if len(ingredientes) > 0:
+            preco = preco + (len(ingredientes) * 0.5)
+
+        print("Pedido Finalizado.")
+        print(f"O valor total do seu pedido é R${preco}.")
+        print("Obrigada pela preferência. Volte sempre.")
         break
 
     elif resposta.upper() == 'N':
