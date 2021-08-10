@@ -45,19 +45,22 @@ while True:
         print("MÉDIA -------------- R$25,00")
         print("GRANDE ------------- R$30,00")
         tamanho = input('')
-        preco = valores[tamanho]
+        preco = valores[tamanho.lower()]
         
         if len(ingredientes) > 0:
             preco = preco + (len(ingredientes) * 0.5)
 
         print("Pedido Finalizado.")
         print(f"O valor total do seu pedido é R${preco}.")
-        print("Obrigada pela preferência. Volte sempre.")
+        print("Obrigada pela preferência.")
         break
 
     elif resposta.upper() == 'N':
-        print(f'Tudo bem. Volte sempre.')
+        print(f'Tudo bem.')
         break
 
     else:
         print('Erro. Tente novamente.')
+
+print("Volte Sempre.")
+close = input()
